@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.contactApp.models.Role.ROLE_FELLOW;
 
 public class AppContactRepository implements ContactRepository {
 

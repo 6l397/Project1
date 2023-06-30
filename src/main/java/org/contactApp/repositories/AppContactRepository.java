@@ -2,7 +2,6 @@ package org.contactApp.repositories;
 
 import org.contactApp.models.Contact;
 import org.contactApp.models.ContactsDataSource;
-import org.contactApp.models.Role;
 
 import java.io.IOException;
 import java.util.ArrayList;

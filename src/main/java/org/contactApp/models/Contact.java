@@ -2,6 +2,7 @@ package org.contactApp.models;
 
 import java.time.LocalDate;
 import java.util.Set;
+
 public class Contact {
     private FullName fullName;
     private String song;
@@ -38,6 +39,7 @@ public class Contact {
                 ", роль: " + getRolesAsString() +
                 ", дата народження: " + dateBirth;
     }
+
     private String getRolesAsString() {
         StringBuilder rolesString = new StringBuilder();
         for (Role role : roles) {
@@ -46,6 +48,7 @@ public class Contact {
         rolesString.setLength(rolesString.length() - 2);
         return rolesString.toString();
     }
+
     private String roleToString(Role role) {
         switch (role) {
             case ROLE_RELATIVE:

@@ -1,4 +1,5 @@
 package org.contactApp;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.contactApp.converters.GsonConverter;
@@ -20,15 +21,15 @@ import java.util.Set;
 
 public class ContactList {
     private static void showMenu() {
-        System.out.println( "Ось, що вміє мій ContactList. Оберіть команду: \n" +
+        System.out.println("Ось, що вміє мій ContactList. Оберіть команду: \n" +
                 """
-                0. Вихід
-                1. Додати контакт
-                2. Оновити контакт
-                3. Показати контакти
-                4. Видалити контакт
-                5. Знайти контакт
-                6. Зберегти контакт""");
+                        0. Вихід
+                        1. Додати контакт
+                        2. Оновити контакт
+                        3. Показати контакти
+                        4. Видалити контакт
+                        5. Знайти контакт
+                        6. Зберегти контакти""");
     }
 
     private static Role selectRole() {
@@ -115,7 +116,7 @@ public class ContactList {
                         System.out.println("Уведіть змінену пісню: ");
                         String newSong = scanner.nextLine();
 
-                        System.out.println("Уведіть змінену дату народження (дд.мм.рррр):");
+                        System.out.println("Уведіть змінену дату народження (рррр-мм-дд):");
                         String newDateOfBirthString = scanner.nextLine();
                         LocalDate newDateOfBirth = LocalDate.parse(newDateOfBirthString);
 

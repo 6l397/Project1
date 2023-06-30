@@ -12,16 +12,17 @@ import static org.contactApp.models.Role.ROLE_FELLOW;
 
 public class AppContactRepository implements ContactRepository {
 
-    private List<Contact> contactList;
     private final ContactsDataSource contactsDataSource;
+    private List<Contact> contactList;
 
     public AppContactRepository(List<Contact> contactList, ContactsDataSource contactsDataSource) {
         this.contactList = contactList != null ? contactList : new ArrayList<>();
         this.contactsDataSource = contactsDataSource;
     }
-        @Override
+
+    @Override
     public void addContact(Contact contact) {
-            contactList.add(contact);
+        contactList.add(contact);
     }
 
     @Override
@@ -31,7 +32,7 @@ public class AppContactRepository implements ContactRepository {
     }
 
     @Override
-    public void showContact (Contact contact) throws IOException {
+    public void showContact(Contact contact) throws IOException {
         contactsDataSource.showContacts();
 
     }
@@ -46,9 +47,9 @@ public class AppContactRepository implements ContactRepository {
     public List<Contact> searchContact(String search) {
         List<Contact> searchResults = new ArrayList<>();
         for (Contact contact : contactList) {
-            if (contact.getFullName().getName().contains(search)||
-                    contact.getFullName().getSurname().contains(search)||
-                    contact.getSong().contains(search)){
+            if (contact.getFullName().getName().contains(search) ||
+                    contact.getFullName().getSurname().contains(search) ||
+                    contact.getSong().contains(search)) {
                 searchResults.add(contact);
             }
         }

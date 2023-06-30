@@ -15,6 +15,10 @@ public class GsonConverter implements JsonConverter {
         this.gson = gson;
     }
 
+    public static Gson createGson() {
+        return new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
+    }
+
     @Override
     public String toJson(List<Contact> contactList) {
         return gson.toJson(contactList);
@@ -24,9 +28,5 @@ public class GsonConverter implements JsonConverter {
     public List<Contact> fromJson(String contactList) {
         return gson.fromJson(contactList, new TypeToken<List<Contact>>() {
         }.getType());
-    }
-
-    public static Gson createGson() {
-        return new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).create();
     }
 }

@@ -32,13 +32,11 @@ public class AppContactRepository implements ContactRepository {
     @Override
     public void showContact(Contact contact) throws IOException {
         contactsDataSource.showContacts();
-
     }
 
     @Override
     public void deleteContact(Contact contact) {
         contactList.remove(contact);
-
     }
 
     @Override
